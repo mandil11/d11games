@@ -609,7 +609,17 @@ body {
     box-shadow: var(--card-shadow);
 }
 
+:root {
+    --footer-heading-color: #ffffff; /* Example color for dark theme */
+    --footer-link-color: #cccccc;
+    --footer-link-hover-color: #ffffff;
+}
 
+[data-theme="light"] {
+    --footer-heading-color: #333333; /* Example color for light theme */
+    --footer-link-color: #666666;
+    --footer-link-hover-color: #333333;
+}
 
 footer {
     background-color: #1a1a1a; /* Darker background */
@@ -759,6 +769,32 @@ footer {
 .new-copyright {
     font-size: 0.8em;
     color: #888;
+}
+
+.new-footer-column h3 {
+    color: var(--footer-heading-color); /* Assuming you have a CSS variable for heading color */
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.new-footer-column p {
+    margin-bottom: 10px;
+}
+
+.new-footer-column a.member-email {
+    color: var(--footer-link-color); /* Assuming you have a CSS variable for link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.new-footer-column a.member-email:hover {
+    color: var(--footer-link-hover-color); /* Assuming you have a CSS variable for link hover color */
+    text-decoration: underline;
+}
+
+/* Optional: Add some spacing between the contact links if needed */
+.new-footer-column p:not(:last-child) {
+    margin-bottom: 5px;
 }
 
 /* Responsive adjustments  */
